@@ -1,0 +1,951 @@
+/* ==========================================================================
+   SHREERAKSHA SOLUTIONS - CORE DESIGN SYSTEM & TOKENS
+   User Palette:
+   - #06141B (Midnight Obsidian Navy)
+   - #11212D (Dark Slate Navy Base)
+   - #253745 (Deep Slate Blue)
+   - #4A5C6A (Medium Steel Slate)
+   - #9BA8AB (Soft Mist Slate / Half Dark Grey)
+   - #CCD0CF (Pale Silver Ice)
+   Typography:
+   - Light Theme Font: THICK BLACK (#000000, font-weight: 600 - 800)
+   - Dark Theme Font:  PURE WHITE (#ffffff)
+   ========================================================================== */
+
+/* Dark Theme Tokens (Default & body.theme-dark) */
+:root, body.theme-dark {
+  /* 6-Color User Palette */
+  --palette-1: #06141B;
+  --palette-2: #11212D;
+  --palette-3: #253745;
+  --palette-4: #4A5C6A;
+  --palette-5: #9BA8AB;
+  --palette-6: #CCD0CF;
+
+  /* Brand Accents */
+  --primary: #4A5C6A;
+  --primary-hover: #9BA8AB;
+  --primary-light: rgba(155, 168, 171, 0.15);
+  --primary-border: #4A5C6A;
+  --primary-dark: #253745;
+  --primary-glow: rgba(74, 92, 106, 0.45);
+
+  --secondary: #253745;
+  --secondary-hover: #4A5C6A;
+  --secondary-glow: rgba(37, 55, 69, 0.45);
+  --secondary-light: rgba(74, 92, 106, 0.20);
+
+  /* Spatial Surfaces & Backgrounds */
+  --bg-app: #06141B;
+  --surface: #11212D;
+  --surface-card: #11212D;
+  --surface-muted: rgba(37, 55, 69, 0.45);
+  --surface-hover: rgba(74, 92, 106, 0.25);
+  --border-light: #253745;
+  --border-subtle: rgba(74, 92, 106, 0.35);
+  --border-strong: #4A5C6A;
+  
+  /* Text & Typography: Pure White for Dark Theme */
+  --text-main: #ffffff;
+  --text-secondary: #CCD0CF;
+  --text-muted: #9BA8AB;
+  --text-inverse: #06141B;
+
+  /* Sidebar */
+  --sidebar-bg: #11212D;
+  --sidebar-border: #253745;
+  --sidebar-hover: rgba(74, 92, 106, 0.25);
+  --sidebar-active: #253745;
+  --sidebar-active-accent: #9BA8AB;
+  --sidebar-text: #ffffff;
+  --sidebar-text-hover: #ffffff;
+  --sidebar-text-active: #ffffff;
+  --sidebar-label: #9BA8AB;
+  --header-bg: #11212D;
+
+  /* Glassmorphism Filters & Specular Glow */
+  --glass-blur: blur(20px) saturate(160%);
+  --glass-border: 1px solid #253745;
+  --glass-glow: 0 0 24px rgba(74, 92, 106, 0.25), 0 0 12px rgba(37, 55, 69, 0.35);
+  --shadow-paper: 0 16px 40px rgba(6, 20, 27, 0.65), 0 0 0 1px #253745;
+  --shadow-lg: 0 12px 28px rgba(6, 20, 27, 0.55), 0 0 16px rgba(74, 92, 106, 0.20);
+  --shadow-xl: 0 20px 48px rgba(6, 20, 27, 0.70), 0 0 24px rgba(74, 92, 106, 0.30);
+
+  /* Semantic Status Colors */
+  --color-paid: #34d399;
+  --color-paid-bg: rgba(52, 211, 153, 0.16);
+  --color-paid-border: rgba(52, 211, 153, 0.45);
+
+  --color-sent: #9BA8AB;
+  --color-sent-bg: rgba(155, 168, 171, 0.16);
+  --color-sent-border: rgba(155, 168, 171, 0.45);
+
+  --color-draft: #CCD0CF;
+  --color-draft-bg: rgba(204, 208, 207, 0.12);
+  --color-draft-border: rgba(204, 208, 207, 0.30);
+
+  --color-overdue: #f87171;
+  --color-overdue-bg: rgba(248, 113, 113, 0.16);
+  --color-overdue-border: rgba(248, 113, 113, 0.45);
+
+  --color-partial: #fbbf24;
+  --color-partial-bg: rgba(251, 191, 36, 0.16);
+  --color-partial-border: rgba(251, 191, 36, 0.45);
+
+  --color-void: #94a3b8;
+  --color-void-bg: rgba(148, 163, 184, 0.15);
+  --color-void-border: rgba(148, 163, 184, 0.30);
+
+  /* Body Mesh Gradient (Dark Theme) */
+  --bg-gradient-mesh:
+    radial-gradient(ellipse 900px 700px at 85% 10%, rgba(37, 55, 69, 0.40) 0%, transparent 60%),
+    radial-gradient(circle 600px at 10% 85%, rgba(17, 33, 45, 0.70) 0%, transparent 60%),
+    radial-gradient(circle 750px at 50% 50%, rgba(74, 92, 106, 0.12) 0%, transparent 60%),
+    linear-gradient(135deg, #06141B 0%, #0d1a24 50%, #11212D 100%);
+}
+
+/* Light Theme Tokens */
+body.theme-light {
+  /* 6-Color User Palette */
+  --palette-1: #06141B;
+  --palette-2: #11212D;
+  --palette-3: #253745;
+  --palette-4: #4A5C6A;
+  --palette-5: #9BA8AB;
+  --palette-6: #CCD0CF;
+
+  /* Brand Accents */
+  --primary: #11212D;
+  --primary-hover: #253745;
+  --primary-light: rgba(155, 168, 171, 0.25);
+  --primary-border: #253745;
+  --primary-dark: #06141B;
+  --primary-glow: rgba(37, 55, 69, 0.25);
+
+  --secondary: #4A5C6A;
+  --secondary-hover: #253745;
+  --secondary-glow: rgba(74, 92, 106, 0.25);
+  --secondary-light: rgba(204, 208, 207, 0.35);
+
+  /* Surfaces & Backgrounds */
+  --bg-app: #CCD0CF;
+  --surface: #ffffff;
+  --surface-card: #ffffff;
+  --surface-muted: rgba(204, 208, 207, 0.45);
+  --surface-hover: rgba(155, 168, 171, 0.25);
+  --border-light: #9BA8AB;
+  --border-subtle: rgba(155, 168, 171, 0.45);
+  --border-strong: #4A5C6A;
+
+  /* Text & Typography: THICK BLACK FOR LIGHT THEME */
+  --text-main: #000000;
+  --text-secondary: #000000;
+  --text-muted: #11212D;
+  --text-inverse: #ffffff;
+
+  /* Sidebar */
+  --sidebar-bg: #ffffff;
+  --sidebar-border: #9BA8AB;
+  --sidebar-hover: rgba(204, 208, 207, 0.35);
+  --sidebar-active: #CCD0CF;
+  --sidebar-active-accent: #11212D;
+  --sidebar-text: #000000;
+  --sidebar-text-hover: #000000;
+  --sidebar-text-active: #000000;
+  --sidebar-label: #253745;
+  --header-bg: #ffffff;
+
+  /* Glassmorphism & Shadow */
+  --glass-blur: blur(20px) saturate(180%);
+  --glass-border: 1.5px solid #9BA8AB;
+  --glass-glow: 0 4px 20px rgba(37, 55, 69, 0.12);
+  --shadow-paper: 0 8px 24px rgba(17, 33, 45, 0.12), 0 0 0 1px #9BA8AB;
+  --shadow-lg: 0 12px 28px rgba(17, 33, 45, 0.14);
+  --shadow-xl: 0 20px 40px rgba(17, 33, 45, 0.18);
+
+  /* Semantic Status Colors */
+  --color-paid: #166534;
+  --color-paid-bg: #dcfce7;
+  --color-paid-border: #86efac;
+
+  --color-sent: #253745;
+  --color-sent-bg: rgba(155, 168, 171, 0.35);
+  --color-sent-border: #9BA8AB;
+
+  --color-draft: #0f172a;
+  --color-draft-bg: #e2e8f0;
+  --color-draft-border: #94a3b8;
+
+  --color-overdue: #b91c1c;
+  --color-overdue-bg: #fee2e2;
+  --color-overdue-border: #fca5a5;
+
+  --color-partial: #92400e;
+  --color-partial-bg: #fef3c7;
+  --color-partial-border: #fcd34d;
+
+  --color-void: #1e293b;
+  --color-void-bg: #f1f5f9;
+  --color-void-border: #94a3b8;
+
+  /* Body Gradient Mesh (Light Theme) */
+  --bg-gradient-mesh:
+    radial-gradient(ellipse 900px 700px at 15% 10%, rgba(204, 208, 207, 0.65) 0%, transparent 60%),
+    radial-gradient(circle 600px at 85% 90%, rgba(155, 168, 171, 0.45) 0%, transparent 60%),
+    linear-gradient(135deg, #CCD0CF 0%, #e8ebea 50%, #dbe0df 100%);
+}
+
+:root {
+  /* Radii */
+  --radius-xs: 4px;
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 14px;
+  --radius-xl: 20px;
+  --radius-full: 9999px;
+
+  /* Font stacks */
+  --font-sans: 'Rubik', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-heading: 'Rubik', var(--font-sans);
+
+  /* Transitions */
+  --transition-fast: 0.15s cubic-bezier(0.16, 1, 0.3, 1);
+  --transition-normal: 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  --transition-bounce: 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+/* Base Resets & Universal Typography Defaults */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+  font-family: var(--font-sans);
+  font-size: 16px;
+  line-height: 1.5;
+  color: var(--text-main);
+  background-color: var(--bg-app);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  transition: background-color 0.35s ease, color 0.35s ease;
+}
+
+/* ==========================================================================
+   MANDATORY USER FONT RULES:
+   1. LIGHT THEME: THICK BLACK FONT (#000000 with thick bold weight 600-800)
+   2. DARK THEME:  PURE WHITE FONT (#ffffff)
+   ========================================================================== */
+
+/* 1. LIGHT THEME: THICK BLACK FONT */
+body.theme-light,
+body.theme-light *:not(.btn-primary):not(.btn-primary *):not(.btn-danger):not(.btn-danger *):not(.badge-paid):not(.badge-overdue):not(.shreeraksha-document *):not(.sr-sign-header):not(.sr-bank-header) {
+  color: #000000;
+}
+
+body.theme-light h1,
+body.theme-light h2,
+body.theme-light h3,
+body.theme-light h4,
+body.theme-light h5,
+body.theme-light h6,
+body.theme-light b,
+body.theme-light strong,
+body.theme-light th,
+body.theme-light .font-bold,
+body.theme-light .font-semibold,
+body.theme-light .table-title,
+body.theme-light .kpi-value,
+body.theme-light .kpi-title,
+body.theme-light .brand-name,
+body.theme-light .modal-title,
+body.theme-light .text-2xl,
+body.theme-light .text-xl,
+body.theme-light .text-lg,
+body.theme-light .form-label,
+body.theme-light label {
+  font-weight: 700 !important;
+  color: #000000 !important;
+}
+
+body.theme-light p,
+body.theme-light span,
+body.theme-light div,
+body.theme-light a,
+body.theme-light td,
+body.theme-light input,
+body.theme-light select,
+body.theme-light textarea,
+body.theme-light .nav-item,
+body.theme-light .nav-label,
+body.theme-light .customer-name-link,
+body.theme-light .text-secondary,
+body.theme-light .text-muted {
+  font-weight: 600 !important;
+  color: #000000 !important;
+}
+
+/* BUTTONS IN LIGHT THEME - ZERO INNER BORDERS AROUND TEXT */
+body.theme-light .btn-primary {
+  background: linear-gradient(135deg, #11212D 0%, #253745 100%) !important;
+  color: #ffffff !important;
+  stroke: #ffffff !important;
+  border: 1px solid #11212D !important;
+  font-weight: 700 !important;
+}
+body.theme-light .btn-primary * {
+  color: #ffffff !important;
+  stroke: #ffffff !important;
+  border: none !important;
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+body.theme-light .btn-danger {
+  color: #ffffff !important;
+  stroke: #ffffff !important;
+}
+body.theme-light .btn-danger * {
+  color: #ffffff !important;
+  stroke: #ffffff !important;
+  border: none !important;
+  outline: none !important;
+}
+
+body.theme-light .btn-secondary {
+  background-color: #CCD0CF !important;
+  color: #000000 !important;
+  stroke: #000000 !important;
+  border: 1.5px solid #9BA8AB !important;
+  font-weight: 700 !important;
+}
+body.theme-light .btn-secondary:hover {
+  background-color: #9BA8AB !important;
+  border-color: #4A5C6A !important;
+  color: #000000 !important;
+}
+
+/* CRITICAL: STRIKE OUT ALL INNER BORDERS ON TEXT OR SPANS */
+.btn *,
+.btn span,
+.btn svg,
+.btn i,
+body.theme-light .btn *,
+body.theme-light .btn-secondary *,
+body.theme-light .btn-primary *,
+body.theme-dark .btn *,
+body.theme-dark .btn-secondary *,
+body.theme-dark .btn-primary * {
+  border: none !important;
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+body.theme-light .data-table th,
+body.theme-light th {
+  background-color: #CCD0CF !important;
+  color: #000000 !important;
+  font-weight: 700 !important;
+  border-bottom: 2px solid #9BA8AB !important;
+}
+
+body.theme-light .data-table td,
+body.theme-light td {
+  color: #000000 !important;
+  font-weight: 600 !important;
+  border-bottom: 1px solid #CCD0CF !important;
+}
+
+body.theme-light input::placeholder,
+body.theme-light textarea::placeholder {
+  color: rgba(0, 0, 0, 0.55) !important;
+  font-weight: 600 !important;
+}
+
+/* 2. DARK THEME: CRISP WHITE FONT */
+body.theme-dark,
+body.theme-dark *:not(.shreeraksha-document):not(.shreeraksha-document *),
+body:not(.theme-light) *:not(.shreeraksha-document):not(.shreeraksha-document *) {
+  color: #ffffff !important;
+}
+
+body.theme-dark h1,
+body.theme-dark h2,
+body.theme-dark h3,
+body.theme-dark h4,
+body.theme-dark h5,
+body.theme-dark h6,
+body.theme-dark b,
+body.theme-dark strong,
+body.theme-dark th,
+body.theme-dark .font-bold,
+body.theme-dark .font-semibold,
+body.theme-dark .table-title,
+body.theme-dark .kpi-value,
+body.theme-dark .brand-name,
+body.theme-dark .modal-title,
+body.theme-dark .text-2xl,
+body.theme-dark .text-xl,
+body.theme-dark .text-lg,
+body:not(.theme-light) h1,
+body:not(.theme-light) h2,
+body:not(.theme-light) h3,
+body:not(.theme-light) h4,
+body:not(.theme-light) h5,
+body:not(.theme-light) h6,
+body:not(.theme-light) th {
+  color: #ffffff !important;
+  font-weight: 700 !important;
+}
+
+body.theme-dark .data-table th,
+body:not(.theme-light) .data-table th {
+  background-color: #11212D !important;
+  color: #ffffff !important;
+  font-weight: 700 !important;
+  border-bottom: 2px solid #253745 !important;
+}
+
+body.theme-dark .data-table td,
+body:not(.theme-light) .data-table td {
+  color: #ffffff !important;
+  border-bottom: 1px solid rgba(74, 92, 106, 0.35) !important;
+}
+
+body.theme-dark .btn-primary {
+  background: linear-gradient(135deg, #253745 0%, #4A5C6A 100%) !important;
+  border: 1px solid #4A5C6A !important;
+  color: #ffffff !important;
+}
+body.theme-dark .btn-primary * {
+  color: #ffffff !important;
+  stroke: #ffffff !important;
+  border: none !important;
+}
+
+body.theme-dark .btn-secondary {
+  background-color: #253745 !important;
+  border: 1px solid #4A5C6A !important;
+  color: #ffffff !important;
+}
+body.theme-dark .btn-secondary:hover {
+  background-color: #4A5C6A !important;
+  border-color: #9BA8AB !important;
+}
+
+body.theme-dark input::placeholder,
+body.theme-dark textarea::placeholder,
+body:not(.theme-light) input::placeholder,
+body:not(.theme-light) textarea::placeholder {
+  color: rgba(255, 255, 255, 0.6) !important;
+}
+
+/* ==========================================================================
+   DOCUMENT CANVAS ABSOLUTE THEME IMMUNITY (A4 PRINT & PREVIEW)
+   Never changes regardless of whether body has .theme-dark or .theme-light!
+   Paper is ALWAYS Crisp White, Text is ALWAYS Black, Borders are Solid Black!
+   ========================================================================== */
+.shreeraksha-document,
+.shreeraksha-document * {
+  -webkit-print-color-adjust: exact !important;
+  print-color-adjust: exact !important;
+}
+
+body.theme-dark .shreeraksha-document,
+body.theme-light .shreeraksha-document,
+body .shreeraksha-document,
+body:not(.theme-light) .shreeraksha-document {
+  background-color: #ffffff !important;
+  color: #000000 !important;
+}
+
+body.theme-dark .shreeraksha-document p,
+body.theme-light .shreeraksha-document p,
+body .shreeraksha-document p,
+body.theme-dark .shreeraksha-document span,
+body.theme-light .shreeraksha-document span,
+body .shreeraksha-document span,
+body.theme-dark .shreeraksha-document div,
+body.theme-light .shreeraksha-document div,
+body .shreeraksha-document div,
+body.theme-dark .shreeraksha-document td,
+body.theme-light .shreeraksha-document td,
+body .shreeraksha-document td,
+body.theme-dark .shreeraksha-document b,
+body.theme-light .shreeraksha-document b,
+body .shreeraksha-document b,
+body.theme-dark .shreeraksha-document strong,
+body.theme-light .shreeraksha-document strong,
+body .shreeraksha-document strong,
+body.theme-dark .shreeraksha-document h1,
+body.theme-light .shreeraksha-document h1,
+body .shreeraksha-document h1,
+body.theme-dark .shreeraksha-document h2,
+body.theme-light .shreeraksha-document h2,
+body .shreeraksha-document h2,
+body.theme-dark .shreeraksha-document h3,
+body.theme-light .shreeraksha-document h3,
+body .shreeraksha-document h3,
+body.theme-dark .shreeraksha-document h4,
+body.theme-light .shreeraksha-document h4,
+body .shreeraksha-document h4,
+body.theme-dark .shreeraksha-document ul,
+body.theme-light .shreeraksha-document ul,
+body .shreeraksha-document ul,
+body.theme-dark .shreeraksha-document ol,
+body.theme-light .shreeraksha-document ol,
+body .shreeraksha-document ol,
+body.theme-dark .shreeraksha-document li,
+body.theme-light .shreeraksha-document li,
+body .shreeraksha-document li,
+body.theme-dark .shreeraksha-document .sr-terms-list li,
+body.theme-light .shreeraksha-document .sr-terms-list li,
+body .shreeraksha-document .sr-terms-list li,
+body.theme-dark .shreeraksha-document .sr-terms-label,
+body.theme-light .shreeraksha-document .sr-terms-label,
+body .shreeraksha-document .sr-terms-label,
+body.theme-dark .shreeraksha-document .sr-notes-label,
+body.theme-light .shreeraksha-document .sr-notes-label,
+body .shreeraksha-document .sr-notes-label,
+body.theme-dark .shreeraksha-document .sr-notes-val,
+body.theme-light .shreeraksha-document .sr-notes-val,
+body .shreeraksha-document .sr-notes-val,
+body.theme-dark .shreeraksha-document .sr-bank-k,
+body.theme-light .shreeraksha-document .sr-bank-k,
+body .shreeraksha-document .sr-bank-k,
+body.theme-dark .shreeraksha-document .sr-bank-v,
+body.theme-light .shreeraksha-document .sr-bank-v,
+body .shreeraksha-document .sr-bank-v,
+body.theme-dark .shreeraksha-document .sr-words-label,
+body.theme-light .shreeraksha-document .sr-words-label,
+body .shreeraksha-document .sr-words-label,
+body.theme-dark .shreeraksha-document .sr-words-val,
+body.theme-light .shreeraksha-document .sr-words-val,
+body .shreeraksha-document .sr-words-val,
+body.theme-dark .shreeraksha-document .sr-round-label,
+body.theme-light .shreeraksha-document .sr-round-label,
+body .shreeraksha-document .sr-round-label,
+body.theme-dark .shreeraksha-document .sr-round-val,
+body.theme-light .shreeraksha-document .sr-round-val,
+body .shreeraksha-document .sr-round-val,
+body.theme-dark .shreeraksha-document .sr-total-label,
+body.theme-light .shreeraksha-document .sr-total-label,
+body .shreeraksha-document .sr-total-label,
+body.theme-dark .shreeraksha-document .sr-total-val,
+body.theme-light .shreeraksha-document .sr-total-val,
+body .shreeraksha-document .sr-total-val,
+body.theme-dark .shreeraksha-document .sr-sign-label,
+body.theme-light .shreeraksha-document .sr-sign-label,
+body .shreeraksha-document .sr-sign-label,
+body.theme-dark .shreeraksha-document .sr-footer-box,
+body.theme-light .shreeraksha-document .sr-footer-box,
+body .shreeraksha-document .sr-footer-box,
+body.theme-dark .shreeraksha-document .sr-footer-box *,
+body.theme-light .shreeraksha-document .sr-footer-box *,
+body .shreeraksha-document .sr-footer-box *,
+body.theme-dark .shreeraksha-document .sr-document-title,
+body.theme-light .shreeraksha-document .sr-document-title,
+body .shreeraksha-document .sr-document-title {
+  color: #000000 !important;
+}
+
+/* TABLE HEADER: HALF DARK GREY (#9BA8AB) FILLING & BLACK TEXT & CLEAR BORDERS FOR ALL DOCUMENTS */
+body.theme-dark .shreeraksha-document .sr-items-table th,
+body.theme-light .shreeraksha-document .sr-items-table th,
+body .shreeraksha-document .sr-items-table th,
+body.theme-dark .shreeraksha-document .sr-meta-table th,
+body.theme-light .shreeraksha-document .sr-meta-table th,
+body .shreeraksha-document .sr-meta-table th,
+body.theme-dark .shreeraksha-document .sr-invoice-dn-meta-table th,
+body.theme-light .shreeraksha-document .sr-invoice-dn-meta-table th,
+body .shreeraksha-document .sr-invoice-dn-meta-table th,
+body.theme-dark .shreeraksha-document .sr-dn-cn-proforma-meta-table th,
+body.theme-light .shreeraksha-document .sr-dn-cn-proforma-meta-table th,
+body .shreeraksha-document .sr-dn-cn-proforma-meta-table th {
+  background-color: #9BA8AB !important;
+  color: #000000 !important;
+  font-weight: 700 !important;
+  border: 1.5px solid #000000 !important;
+}
+
+/* SHREERAKSHA SOLUTIONS SIGNATURE & BANK HEADER & CONTINUATION BARS: GREY FILLING (#9BA8AB) AND BLACK TEXT (#000000) ON ALL PAGES */
+body.theme-dark .shreeraksha-document .sr-sign-header,
+body.theme-light .shreeraksha-document .sr-sign-header,
+body .shreeraksha-document .sr-sign-header,
+body.theme-dark .shreeraksha-document .sr-bank-header,
+body.theme-light .shreeraksha-document .sr-bank-header,
+body .shreeraksha-document .sr-bank-header,
+body .shreeraksha-document .sr-continued-meta-bar,
+body .shreeraksha-document-page .sr-continued-meta-bar,
+body.theme-dark .shreeraksha-document-page .sr-sign-header,
+body.theme-light .shreeraksha-document-page .sr-sign-header,
+body .shreeraksha-document-page .sr-sign-header,
+body.theme-dark .shreeraksha-document-page .sr-bank-header,
+body.theme-light .shreeraksha-document-page .sr-bank-header,
+body .shreeraksha-document-page .sr-bank-header,
+body.theme-dark .shreeraksha-document .sr-sign-only-block .sr-sign-header,
+body.theme-light .shreeraksha-document .sr-sign-only-block .sr-sign-header,
+body .shreeraksha-document .sr-sign-only-block .sr-sign-header {
+  background-color: #9BA8AB !important;
+  color: #000000 !important;
+  border: 1.5px solid #000000 !important;
+  font-weight: 700 !important;
+  -webkit-print-color-adjust: exact !important;
+  print-color-adjust: exact !important;
+}
+
+body .shreeraksha-document .sr-continued-meta-bar span,
+body .shreeraksha-document .sr-continued-meta-bar strong {
+  color: #000000 !important;
+}
+
+/* VERY CLEAR TABLE BORDERS ON QUOTATIONS AND ALL DOCUMENTS */
+.shreeraksha-document .sr-items-table,
+.shreeraksha-document .sr-meta-table,
+.shreeraksha-document .sr-invoice-dn-meta-table,
+.shreeraksha-document .sr-dn-cn-proforma-meta-table,
+.shreeraksha-document .sr-rounding-table,
+.shreeraksha-document .sr-total-block,
+.shreeraksha-document .sr-notes-terms-block,
+.shreeraksha-document .sr-bank-box,
+.shreeraksha-document .sr-sign-box {
+  border-collapse: collapse !important;
+  border-color: #000000 !important;
+}
+
+.shreeraksha-document .sr-items-table th,
+.shreeraksha-document .sr-items-table td,
+.shreeraksha-document .sr-meta-table th,
+.shreeraksha-document .sr-meta-table td,
+.shreeraksha-document .sr-invoice-dn-meta-table th,
+.shreeraksha-document .sr-invoice-dn-meta-table td,
+.shreeraksha-document .sr-dn-cn-proforma-meta-table th,
+.shreeraksha-document .sr-dn-cn-proforma-meta-table td,
+.shreeraksha-document .sr-bank-table td,
+.shreeraksha-document .sr-rounding-table td {
+  border: 1.2px solid #000000 !important;
+}
+
+body.theme-dark .shreeraksha-document .sr-invoice-dn-meta-table td,
+body.theme-light .shreeraksha-document .sr-invoice-dn-meta-table td,
+body .shreeraksha-document .sr-invoice-dn-meta-table td,
+body.theme-dark .shreeraksha-document .sr-dn-cn-proforma-meta-table td,
+body.theme-light .shreeraksha-document .sr-dn-cn-proforma-meta-table td,
+body .shreeraksha-document .sr-dn-cn-proforma-meta-table td,
+body.theme-dark .shreeraksha-document .sr-item-desc-main,
+body.theme-light .shreeraksha-document .sr-item-desc-main,
+body .shreeraksha-document .sr-item-desc-main,
+body.theme-dark .shreeraksha-document .sr-item-specs,
+body.theme-light .shreeraksha-document .sr-item-specs,
+body .shreeraksha-document .sr-item-specs,
+body.theme-dark .shreeraksha-document .sr-item-title,
+body.theme-light .shreeraksha-document .sr-item-title,
+body .shreeraksha-document .sr-item-title,
+body.theme-dark .shreeraksha-document .sr-item-hsn,
+body.theme-light .shreeraksha-document .sr-item-hsn,
+body .shreeraksha-document .sr-item-hsn {
+  color: #000000 !important;
+}
+
+/* High-Contrast Dropdowns for Dark & Light Themes */
+body.theme-dark select,
+body.theme-dark .input-select,
+body:not(.theme-light) select,
+body:not(.theme-light) .input-select {
+  color-scheme: dark !important;
+  background-color: #11212D !important;
+  color: #ffffff !important;
+  border-color: #4A5C6A !important;
+}
+
+body.theme-dark select option,
+body.theme-dark .input-select option,
+body:not(.theme-light) select option,
+body:not(.theme-light) .input-select option {
+  background-color: #11212D !important;
+  color: #ffffff !important;
+}
+
+body.theme-light select,
+body.theme-light .input-select {
+  color-scheme: light !important;
+  background-color: #ffffff !important;
+  color: #000000 !important;
+  border: 1.5px solid #9BA8AB !important;
+  font-weight: 600 !important;
+}
+
+body.theme-light select option,
+body.theme-light .input-select option {
+  background-color: #ffffff !important;
+  color: #000000 !important;
+  font-weight: 600 !important;
+}
+
+select option,
+.input-select option,
+optgroup {
+  background-color: #11212D !important;
+  color: #ffffff !important;
+}
+
+select option:checked,
+.input-select option:checked,
+select option:hover,
+.input-select option:hover {
+  background-color: #253745 !important;
+  color: #ffffff !important;
+}
+
+body.theme-light select option:checked,
+body.theme-light .input-select option:checked,
+body.theme-light select option:hover,
+body.theme-light .input-select option:hover {
+  background-color: #CCD0CF !important;
+  color: #000000 !important;
+  font-weight: 700 !important;
+}
+
+/* Customer & Party Name Links */
+.customer-name-link {
+  color: var(--text-main) !important;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color var(--transition-fast);
+  cursor: pointer;
+}
+.customer-name-link:hover {
+  color: var(--secondary) !important;
+  text-decoration: underline;
+}
+
+/* Top-level Layout Grid */
+.app-layout {
+  display: flex;
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+  background: var(--bg-gradient-mesh);
+  background-attachment: fixed;
+  transition: background 0.4s ease;
+}
+
+.app-main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  min-width: 0;
+  overflow: hidden;
+}
+
+.view-content-area {
+  flex: 1;
+  overflow-y: auto;
+  overflow-x: hidden;
+  padding: 1.5rem 2rem;
+  background-color: transparent;
+  position: relative;
+}
+
+/* Loading Spinner */
+.view-loading-state {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 60vh;
+  gap: 1rem;
+  color: var(--text-muted);
+}
+
+.spinner {
+  width: 38px;
+  height: 38px;
+  border: 3px solid var(--border-light);
+  border-top-color: var(--primary);
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+/* Scrollbar Polish */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: #9BA8AB;
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #4A5C6A;
+}
+
+/* Utility Helpers */
+.flex { display: flex; }
+.flex-col { display: flex; flex-direction: column; }
+.items-center { align-items: center; }
+.justify-between { justify-content: space-between; }
+.justify-end { justify-content: flex-end; }
+.gap-1 { gap: 0.25rem; }
+.gap-2 { gap: 0.5rem; }
+.gap-3 { gap: 0.75rem; }
+.gap-4 { gap: 1rem; }
+.gap-6 { gap: 1.5rem; }
+
+.text-left { text-align: left !important; }
+.text-right { text-align: right !important; }
+.text-center { text-align: center !important; }
+
+.font-bold { font-weight: 500; }
+.font-semibold { font-weight: 500; }
+.font-medium { font-weight: 500; }
+
+.text-xs { font-size: 0.75rem; }
+.text-sm { font-size: 0.875rem; }
+.text-base { font-size: 1rem; }
+.text-lg { font-size: 1.125rem; }
+.text-xl { font-size: 1.25rem; }
+.text-2xl { font-size: 1.5rem; font-family: var(--font-heading); }
+
+.text-muted { color: var(--text-muted); }
+.text-secondary { color: var(--text-secondary); }
+.text-primary { color: var(--primary); }
+.text-success { color: var(--color-paid); }
+.text-danger { color: var(--color-overdue); }
+.text-warning { color: var(--color-partial); }
+
+.w-full { width: 100%; }
+.h-full { height: 100%; }
+
+/* ==========================================================================
+   USER INTERFACE PALETTE SURFACES (LIGHT & DARK THEMES)
+   Palette: #06141B, #11212D, #253745, #4A5C6A, #9BA8AB, #CCD0CF
+   ========================================================================== */
+
+/* LIGHT THEME SURFACES */
+body.theme-light .table-card,
+body.theme-light .kpi-card,
+body.theme-light .glass-capsule-dock,
+body.theme-light .modal-dialog,
+body.theme-light .search-modal-card {
+  background-color: #ffffff !important;
+  border: 1.5px solid #9BA8AB !important;
+  box-shadow: 0 6px 20px rgba(17, 33, 45, 0.12) !important;
+}
+
+body.theme-light .sidebar {
+  background-color: #ffffff !important;
+  border-right: 1.5px solid #9BA8AB !important;
+  box-shadow: 3px 0 16px rgba(17, 33, 45, 0.08) !important;
+}
+
+body.theme-light .app-header {
+  background-color: #ffffff !important;
+  border-bottom: 1.5px solid #9BA8AB !important;
+  box-shadow: 0 3px 16px rgba(17, 33, 45, 0.08) !important;
+}
+
+body.theme-light .table-header-toolbar {
+  background-color: #f1f4f4 !important;
+  border-bottom: 1.5px solid #9BA8AB !important;
+}
+
+body.theme-light .nav-item:hover {
+  background-color: #e8ebea !important;
+  color: #000000 !important;
+}
+
+body.theme-light .nav-item.active {
+  background-color: #CCD0CF !important;
+  color: #000000 !important;
+}
+
+body.theme-light .nav-item.active::before {
+  background-color: #11212D !important;
+}
+
+body.theme-light .kpi-header .kpi-title {
+  color: #000000 !important;
+  font-weight: 700 !important;
+}
+
+body.theme-light .kpi-value {
+  color: #000000 !important;
+  font-weight: 700 !important;
+}
+
+body.theme-light .kpi-icon-wrap {
+  background-color: #CCD0CF !important;
+  color: #11212D !important;
+  border: 1px solid #9BA8AB !important;
+}
+
+/* DARK THEME SURFACES */
+body.theme-dark .table-card,
+body.theme-dark .kpi-card,
+body.theme-dark .glass-capsule-dock,
+body.theme-dark .modal-dialog,
+body.theme-dark .search-modal-card,
+body:not(.theme-light) .table-card,
+body:not(.theme-light) .kpi-card,
+body:not(.theme-light) .modal-dialog,
+body:not(.theme-light) .search-modal-card {
+  background-color: #11212D !important;
+  border: 1px solid #253745 !important;
+  box-shadow: 0 12px 30px rgba(6, 20, 27, 0.6) !important;
+}
+
+body.theme-dark .sidebar,
+body:not(.theme-light) .sidebar {
+  background-color: #11212D !important;
+  border-right: 1px solid #253745 !important;
+  box-shadow: 4px 0 20px rgba(6, 20, 27, 0.5) !important;
+}
+
+body.theme-dark .app-header,
+body:not(.theme-light) .app-header {
+  background-color: #11212D !important;
+  border-bottom: 1px solid #253745 !important;
+  box-shadow: 0 4px 20px rgba(6, 20, 27, 0.5) !important;
+}
+
+body.theme-dark .table-header-toolbar,
+body:not(.theme-light) .table-header-toolbar {
+  background-color: #0d1a24 !important;
+  border-bottom: 1px solid #253745 !important;
+}
+
+body.theme-dark .nav-item:hover,
+body:not(.theme-light) .nav-item:hover {
+  background-color: rgba(74, 92, 106, 0.35) !important;
+  color: #ffffff !important;
+}
+
+body.theme-dark .nav-item.active,
+body:not(.theme-light) .nav-item.active {
+  background-color: #253745 !important;
+  color: #ffffff !important;
+}
+
+body.theme-dark .nav-item.active::before,
+body:not(.theme-light) .nav-item.active::before {
+  background-color: #9BA8AB !important;
+}
+
+body.theme-dark .kpi-icon-wrap,
+body:not(.theme-light) .kpi-icon-wrap {
+  background-color: rgba(37, 55, 69, 0.45) !important;
+  color: #9BA8AB !important;
+  border: 1px solid #4A5C6A !important;
+}
